@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,200;0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,100;1,9..144,200;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,800;1,9..144,900&display=swap');
+
+:root {
+    --soft-red: hsl(7, 99%, 70%);
+    --yellow: hsl(51, 100%, 49%);
+    --dark-desaturated-cyan: hsl(167, 40%, 24%);
+    --dark-blue: hsl(198, 62%, 26%);
+    --dark-moderete-cyan: hsl(168, 34%, 41%);
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
+    --grayish-blue: hsl(210, 4%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --primary-color: #3ebfff;
+    --primary-shade: #81d5ff;
+    --black-blue: #0b123d;
+    --font-size: 18px;
+    --animation-duration: 1.6s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.mobile-menu-items a,
+.menu-item a {
+    text-transform: capitalize;
+    font-weight: 600;
+}
+
+.navigation-container {
+    background-color: var(--primary-color);
+    height: 43.5em;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.navigation,
+.menu-items,
+.main-menu {
+    display: flex;
+}
+
+.navigation {
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.main-menu {
+    height: 100%;
+    align-items: center;
+}
+
+.menu-items {
+    position: relative;
+    z-index: 52;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.logo {
+    position: relative;
+    z-index: 49;
+}
+
+.logo a {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.link-background {
+    --height: 40px;
+    position: absolute;
+    left: 0%;
+    top: calc(50% - calc(var(--height) / 2.2));
+    background: var(--primary-shade);
+    border-radius: 1em;
+    width: 80px;
+    height: var(--height);
+    z-index: -1;
+    transition: 0.4s cubic-bezier(0.7, 0, 0.38, 0.86) all;
+}
+
+a.active {
+    color: var(--black-blue);
+}
+
+.menu-item {
+    margin: 0 1em;
+}
+
+.menu-item a {
+    transition: all 0.5s;
+    font-size: var(--font-size);
+}
+
+.ham-burger-menu {
+    --duration: 1.6s;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    position: relative;
+    border: none;
+    background: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 50;
+    -webkit-appearence: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ham-burger-menu:before,
+.ham-burger-menu:after {
+    content: "";
+}
+
+.ham-burger-menu:before,
+.ham-burger-menu:after,
+.ham-burger-menu div {
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--white);
+}
+
+.ham-burger-menu div {
+    margin: 6px 0;
+}
+
+.ham-burger-menu.animation {
+    animation: burger var(--duration) linear forwards var(--direction, reverse);
+}
+
+.ham-burger-menu.animation:before,
+.ham-burger-menu.animation:after,
+.ham-burger-menu.animation div {
+    --movement: 2;
+    --rotation: -1;
+    animation: move var(--duration) linear forwards var(--direction, reverse);
+}
+
+.ham-burger-menu.animation div {
+    --movement: 1;
+    --rotation: 1;
+}
+
+.ham-burger-menu.animation:after {
+    --movement: 0;
+    --rotation: 1;
+}
+
+.ham-burger-menu.animation.active {
+    --direction: normal;
+}
+
+@keyframes burger {
+    15% {
+        transform: translateY(8px);
+    }
+
+    30%,
+    40% {
+        transform: none;
+    }
+
+    60% {
+        transform: translateY(12px);
+    }
+
+    75% {
+        transform: translateY(-16px);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes move {
+
+    15%,
+    50% {
+        transform: translateY(calc(10px * var(--movement)));
+    }
+
+    30% {
+        transform: translateY(calc(-6px * var(--movement)));
+    }
+
+    35% {
+        transform: translateY(calc(-8px * var(--movement)));
+    }
+
+    65% {
+        transform: translateY(calc(10px * var(--movement))) rotate(calc(60deg * var(--rotation)));
+    }
+
+    90% {
+        transform: translateY(calc(10px * var(--movement))) rotate(calc(40deg * var(--rotation)));
+    }
+
+    80%,
+    100% {
+        transform: translateY(calc(10px * var(--movement))) rotate(calc(45deg * var(--rotation)));
+    }
+}
+
+.mobile-menu {
+    position: absolute;
+    right: 0;
+    top: 0%;
+    width: 100%;
+    z-index: 49;
+}
+
+.mobile-menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    clip-path: circle(0% at 100% 0%);
+    transition: clip-path 1.5s ease;
+    background-color: var(--yellow);
+}
+
+.no-mobile-menu {
+    clip-path: circle(200% at 100% 0%);
+}
+
+.mobile-menu-item {
+    margin: 1.5em 0;
+}
+
+.mobile-menu-items a {
+    font-size: var(--font-size);
+    color: var(--black-blue);
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 92%;
+    font-family: "Fraunces";
+    color: var(--white);
+    /* background-color: red; */
+}
+
+.banner-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: translateY(-14rem);
+    font-size: clamp(2.5rem, 6vw, 7rem);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.banner-container svg {
+    transform: translateY(2em);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+@media (max-width: 560px) {
+    .navigation-container {
+        background-image: url('../images/mobile/image-header.jpg');
+    }
+
+    .ham-burger-menu {
+        display: flex;
+    }
+
+    .menu-items {
+        display: none;
+    }
+}
