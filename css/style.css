@@ -7,7 +7,7 @@
     --yellow: hsl(51, 100%, 49%);
     --dark-desaturated-cyan: hsl(167, 40%, 24%);
     --dark-blue: hsl(198, 62%, 26%);
-    --dark-moderete-cyan: hsl(168, 34%, 41%);
+    --dark-moderate-cyan: hsl(168, 34%, 41%);
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
     --very-dark-grayish-blue: hsl(213, 9%, 39%);
     --dark-grayish-blue: hsl(232, 10%, 55%);
@@ -15,7 +15,7 @@
     --white: hsl(0, 0%, 100%);
     --primary-color: #3ebfff;
     --primary-shade: #81d5ff;
-    --black-blue: #0b123d;
+    --black-blue: #0d1547;
     --font-size: 18px;
     --animation-duration: 1.6s;
 }
@@ -44,24 +44,32 @@ a {
     color: var(--white);
 }
 
+.desktop-max {
+    max-width: 1440px;
+}
+
 .mobile-menu-items a,
 .menu-item a {
     text-transform: capitalize;
     font-weight: 600;
 }
 
-.navigation-container {
-    background-color: var(--primary-color);
-    height: 43.5em;
-    background-image: url("../images/desktop/image-header.jpg");
+.bg-image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
+.navigation-container {
+    background-color: var(--primary-color);
+    height: 43.5em;
+    background-image: url("../images/desktop/image-header.jpg");
+}
+
 .navigation,
 .menu-items,
-.main-menu {
+.main-menu,
+.brand-info {
     display: flex;
 }
 
@@ -69,7 +77,8 @@ a {
     justify-content: space-between;
     height: 60px;
     align-items: center;
-    margin: 0 2em;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
 .main-menu {
@@ -100,7 +109,7 @@ a {
     position: absolute;
     left: 0%;
     top: calc(50% - calc(var(--height) / 2.2));
-    background: var(--primary-shade);
+    background-color: var(--primary-shade);
     border-radius: 1em;
     width: 80px;
     height: var(--height);
@@ -276,14 +285,13 @@ a.active {
     height: 92%;
     font-family: "Fraunces";
     color: var(--white);
-    /* background-color: red; */
 }
 
 .banner-title {
     font-weight: 700;
     text-transform: uppercase;
     transform: translateY(-14rem);
-    font-size: clamp(2.5rem, 6vw, 7rem);
+    font-size: clamp(3rem, 6vw, 7rem);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
@@ -292,7 +300,133 @@ a.active {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
+.main-section {
+    margin: 0 auto;
+}
+
+.brand-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.brand-title,
+.brand-cta,
+.brand-content .services-title {
+    font-family: "Fraunces";
+    font-weight: 700;
+}
+
+.brand-title {
+    font-size: clamp(2.4rem, 3vw, 4rem);
+    color: var(--black-blue);
+    line-height: 1.2;
+}
+
+.brand-container .brand-cta {
+    text-transform: uppercase;
+    color: var(--very-dark-desaturated-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.brand-cta::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    width: 110%;
+    height: 7px;
+    background-color: var(--yellow);
+    border-radius: 0.2em;
+    transform: translateX(-50%);
+}
+
+.soft-red::after {
+    background-color: var(--soft-red);
+}
+
+.brand-info {
+    min-height: 30em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.brand-content {
+    max-width: 70%;
+}
+
+.brand-description,
+.photography-description,
+.graphic-description {
+    line-height: 1.6;
+    font-weight: 500;
+    margin: 1.5em 0;
+    font-size: 1.8rem;
+}
+
+.brand-description {
+    color: var(--very-dark-grayish-blue);
+}
+
+.services {
+    justify-content: end;
+}
+
+.services .brand-content {
+    max-width: 50%;
+}
+
+.services-title,
+.photography-description,
+.graphic-description {
+    text-align: center;
+}
+
+.graphic-description,
+.dark-cyan {
+    color: var(--dark-desaturated-cyan);
+}
+
+.photography-description,
+.dark-blue {
+    color: var(--dark-blue);
+}
+
+.brand-bg-image {
+    background-image: url("../images/desktop/image-transform.jpg");
+    background-color: var(--yellow);
+}
+
+.brand-bg-image-2 {
+    background-image: url('../images/desktop/image-stand-out.jpg');
+    background-color: var(--soft-red);
+}
+
+.brand-bg-image-3 {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+}
+
+.brand-bg-image-4 {
+    background-image: url("../images/desktop/image-photography.jpg");
+}
+
+@media (max-width: 700px) {
+    .brand-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mob-row-1 {
+        grid-row: 1;
+    }
+}
+
 @media (max-width: 560px) {
+    .logo a {
+        font-size: 2.5rem;
+    }
+
     .navigation-container {
         background-image: url('../images/mobile/image-header.jpg');
     }
@@ -303,5 +437,9 @@ a.active {
 
     .menu-items {
         display: none;
+    }
+
+    .services .brand-content {
+        max-width: 70%;
     }
 }
