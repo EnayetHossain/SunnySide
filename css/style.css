@@ -406,10 +406,12 @@ a.active {
 
 .brand-bg-image-3 {
     background-image: url("../images/desktop/image-graphic-design.jpg");
+    background-color: var(--dark-moderate-cyan);
 }
 
 .brand-bg-image-4 {
     background-image: url("../images/desktop/image-photography.jpg");
+    background-color: var(--primary-color);
 }
 
 @media (max-width: 700px) {
@@ -441,5 +443,25 @@ a.active {
 
     .services .brand-content {
         max-width: 70%;
+    }
+
+    .brand-bg-image {
+        background-image: url("../images/mobile/image-transform.jpg");
+        background-color: var(--yellow);
+    }
+
+    .brand-bg-image-2 {
+        background-image: url('../images/mobile/image-stand-out.jpg');
+        background-color: var(--soft-red);
+    }
+
+    .brand-bg-image-3 {
+        background-image: url("../images/mobile/image-graphic-design.jpg");
+        background-color: var(--dark-desaturated-cyan);
+    }
+
+    .brand-bg-image-4 {
+        background-image: url("../images/mobile/image-photography.jpg");
+        background-color: var(--primary-color);
     }
 }
