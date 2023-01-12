@@ -414,6 +414,21 @@ a.active {
     background-color: var(--primary-color);
 }
 
+.brand-bg-image,
+.brand-bg-image-2,
+.brand-bg-image-3,
+.brand-bg-image-4,
+.services-title,
+.photography-description,
+.graphic-description,
+.brand-title,
+.brand-description,
+.brand-cta {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* polygon(0% 0%, 100% 0%, 107% 100%, -7% 100%) */
+
 @media (max-width: 700px) {
     .brand-container {
         grid-template-columns: 1fr;
