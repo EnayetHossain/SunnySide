@@ -85,6 +85,6 @@ scrollAnimation(".brand-scroll-anim-3 .services-title", ".brand-scroll-anim-3", 
 scrollAnimation(".brand-scroll-anim-3 .graphic-description", ".brand-scroll-anim-3", 2, 2, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
 
 
-scrollAnimation('.brand-bg-image-4', '.brand-scroll-anim-4', 2, 2, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-4 .services-title", ".brand-scroll-anim-4", 2, 3, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-4 .photography-description", ".brand-scroll-anim-4", 2, 4, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation('.brand-bg-image-4', '.brand-scroll-anim-4', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-4 .services-title", ".brand-scroll-anim-4", 2, 1, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-4 .photography-description", ".brand-scroll-anim-4", 2, 2, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
