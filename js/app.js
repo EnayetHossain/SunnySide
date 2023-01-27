@@ -59,25 +59,26 @@ const scrollAnimation = (animationElement, scrollTarget, duration, delay, marker
         scrollTrigger: {
             trigger: scrollTarget,
             markers: markers,
-            start: "top 76%",
+            start: "top 80%"
         },
 
         clipPath: polygon,
         duration: duration,
-        delay: delay
+        delay: delay,
+        ease: "power3.out"
     });
 }
 
-scrollAnimation('.brand-bg-image', '.brand-scroll-anim-1', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-1 .brand-title", ".brand-scroll-anim-1", 2, 1, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-1 .brand-description", ".brand-scroll-anim-1", 2, 1.5, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-1 .brand-cta", ".brand-scroll-anim-1", 2, 2, true, "polygon(0 0, 100% 0, 107% 100%, -7% 100%)");
+scrollAnimation('.brand-bg-image', '.brand-bg-image', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-1 .brand-title", ".brand-scroll-anim-1", 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-1 .brand-description", ".brand-scroll-anim-1", 2, 1, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-1 .brand-cta", ".brand-scroll-anim-1", 2, 1.5, true, "polygon(0 0, 100% 0, 107% 100%, -7% 100%)");
 
 
-scrollAnimation('.brand-bg-image-2', '.brand-scroll-anim-2', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-2 .brand-title", ".brand-scroll-anim-2", 2, 1, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-2 .brand-description", ".brand-scroll-anim-2", 2, 1.5, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
-scrollAnimation(".brand-scroll-anim-2 .brand-cta", ".brand-scroll-anim-2", 2, 2, true, "polygon(0 0, 100% 0, 107% 100%, -7% 100%)");
+scrollAnimation('.brand-bg-image-2', '.brand-bg-image-2', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-2 .brand-title", ".brand-scroll-anim-2", 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-2 .brand-description", ".brand-scroll-anim-2", 2, 1, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-scroll-anim-2 .brand-cta", ".brand-scroll-anim-2", 2, 1.5, true, "polygon(0 0, 100% 0, 107% 100%, -7% 100%)");
 
 
 scrollAnimation('.brand-bg-image-3', '.brand-scroll-anim-3', 2, 0, true, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
