@@ -24,6 +24,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid greenyellow; */
 }
 
 html {
@@ -311,7 +312,9 @@ a.active {
 
 .brand-title,
 .brand-cta,
-.brand-content .services-title {
+.brand-content .services-title,
+.client-title,
+.name {
     font-family: "Fraunces";
     font-weight: 700;
 }
@@ -380,7 +383,8 @@ a.active {
 
 .services-title,
 .photography-description,
-.graphic-description {
+.graphic-description,
+.client-title {
     text-align: center;
 }
 
@@ -425,6 +429,65 @@ a.active {
 .brand-description,
 .brand-cta {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* client review design */
+.client-review-container {
+    margin: 5rem 0;
+}
+
+.client-reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    gap: 2em;
+    margin: 0 0.5em;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.client-title {
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue);
+    text-transform: uppercase;
+    margin: 1.5em 0;
+}
+
+.img-container {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.description {
+    margin: 2em 0;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.name {
+    font-size: clamp(2rem, 1.9vw, 2.5rem);
+}
+
+.title {
+    color: var(--very-dark-grayish-blue);
+}
+
+.name,
+.title {
+    text-transform: capitalize;
+    margin: 0.5em 0;
 }
 
 /* polygon(0% 0%, 100% 0%, 107% 100%, -7% 100%) */
