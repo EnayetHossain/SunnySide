@@ -89,3 +89,14 @@ scrollAnimation(".brand-scroll-anim-3 .graphic-description", ".brand-scroll-anim
 scrollAnimation('.brand-bg-image-4', '.brand-scroll-anim-4', 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
 scrollAnimation(".brand-scroll-anim-4 .services-title", ".brand-scroll-anim-4", 2, 1, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
 scrollAnimation(".brand-scroll-anim-4 .photography-description", ".brand-scroll-anim-4", 2, 2, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+
+// review section on scroll animation
+scrollAnimation(".review-target-1", ".review-target-1", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".review-target-2", ".review-target-2", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".review-target-3", ".review-target-3", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+
+// gallery section on scroll animation
+scrollAnimation(".brand-gallery-img", ".brand-gallery-img", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-gallery-img-2", ".brand-gallery-img-2", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-gallery-img-3", ".brand-gallery-img-3", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+scrollAnimation(".brand-gallery-img-4", ".brand-gallery-img-4", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");

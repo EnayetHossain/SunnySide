@@ -7,7 +7,7 @@
     --yellow: hsl(51, 100%, 49%);
     --dark-desaturated-cyan: hsl(167, 40%, 24%);
     --dark-blue: hsl(198, 62%, 26%);
-    --dark-moderate-cyan: hsl(168, 34%, 41%);
+    --dark-moderate-cyan: hsl(168, 53%, 73%);
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
     --very-dark-grayish-blue: hsl(213, 9%, 39%);
     --dark-grayish-blue: hsl(232, 10%, 55%);
@@ -433,7 +433,7 @@ a.active {
 
 /* client review design */
 .client-review-container {
-    margin: 5rem 0;
+    margin: 15rem 0;
 }
 
 .client-reviews {
@@ -449,13 +449,15 @@ a.active {
     justify-content: center;
     align-items: center;
     text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .client-title {
     letter-spacing: 2px;
     color: var(--dark-grayish-blue);
     text-transform: uppercase;
-    margin: 1.5em 0;
+    margin: 5em 0;
+    font-size: clamp(1.7rem, 1.9vw, 22.6rem);
 }
 
 .img-container {
@@ -490,6 +492,95 @@ a.active {
     margin: 0.5em 0;
 }
 
+/* brand gallery section style */
+.brand-gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+}
+
+.brand-gallery-img {
+    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+}
+
+.brand-gallery-img-2 {
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+}
+
+.brand-gallery-img-3 {
+    background-image: url("../images/desktop/image-gallery-cone.jpg");
+}
+
+.brand-gallery-img-4 {
+    background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+.gallery-img {
+    min-height: 41rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+/* footer section style */
+footer {
+    background-color: var(--dark-moderate-cyan);
+    padding: 1em 0;
+    width: 100%;
+}
+
+.footer-content-container {
+    margin: 5em auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content a {
+    color: var(--dark-desaturated-cyan);
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 2em 0 4em;
+}
+
+.footer-menu-item {
+    margin: 0 1.2em;
+}
+
+.footer-menu-item a {
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-handles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.social-item {
+    margin: 0 0.8em;
+}
+
+.social-item a {
+    font-size: 1.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-menu-item a:hover,
+.social-item a:hover {
+    color: var(--white);
+}
+
 /* polygon(0% 0%, 100% 0%, 107% 100%, -7% 100%) */
 
 @media (max-width: 700px) {
@@ -499,6 +590,10 @@ a.active {
 
     .mob-row-1 {
         grid-row: 1;
+    }
+
+    .client-review-container {
+        margin: 5rem 0;
     }
 }
 
@@ -542,4 +637,29 @@ a.active {
         background-image: url("../images/mobile/image-photography.jpg");
         background-color: var(--primary-color);
     }
+
+    .review {
+        margin: 2rem;
+    }
+
+    .client-title {
+        margin: 2em 0;
+    }
+
+    .brand-gallery-img {
+        background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+    }
+
+    .brand-gallery-img-2 {
+        background-image: url("../images/mobile/image-gallery-orange.jpg");
+    }
+
+    .brand-gallery-img-3 {
+        background-image: url("../images/mobile/image-gallery-cone.jpg");
+    }
+
+    .brand-gallery-img-4 {
+        background-image: url("../images/mobile/image-gallery-sugarcubes.jpg");
+    }
+
 }
