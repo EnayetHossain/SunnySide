@@ -59,7 +59,7 @@ const scrollAnimation = (animationElement, scrollTarget, duration, delay, marker
         scrollTrigger: {
             trigger: scrollTarget,
             markers: markers,
-            start: "top 80%"
+            start: "top 50%"
         },
 
         clipPath: polygon,
