@@ -20,6 +20,23 @@
     --animation-duration: 1.6s;
 }
 
+::-webkit-scrollbar {
+    width: 0.7em;
+}
+
+/* ::-webkit-scrollbar-track {
+    background: var(--grayish-blue);
+} */
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+    background: var(--very-dark-grayish-blue);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--very-dark-desaturated-blue);
+}
+
 * {
     margin: 0;
     padding: 0;
