@@ -100,3 +100,44 @@ scrollAnimation(".brand-gallery-img", ".brand-gallery-img", 2, 0, false, "polygo
 scrollAnimation(".brand-gallery-img-2", ".brand-gallery-img-2", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
 scrollAnimation(".brand-gallery-img-3", ".brand-gallery-img-3", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
 scrollAnimation(".brand-gallery-img-4", ".brand-gallery-img-4", 2, 0, false, "polygon(0 0, 100% 0, 100% 100%, 0% 100%)");
+
+// smooth scroll effect
+let current = 0;
+let target = 0;
+let ease = 0.1;
+
+let windowWidth, containerHeight, imgHeight, skewDiff;
+
+let container = document.querySelector(".container");
+
+// linear interpolation function
+const lerp = (start, end, t)=>{
+    return start * (1 - t) + end * t;
+}
+
+// apply the transform
+const setTransform = (el, transform)=>{
+    el.style.transform = transform;
+}
+
+// smooth scroll 
+const smoothScroll = ()=>{
+    current = lerp(current, target, ease);
+    current = parseFloat(current.toFixed(2));
+    target = window.scrollY;
+    skewDiff = (target - current) * 0.015;
+    setTransform(container, `translateY(${-current}px) skewY(${skewDiff}deg)`);
+    requestAnimationFrame(smoothScroll)
+}
+
+// smooth scroll animation
+const setAnimation = ()=>{
+    windowWidth = window.innerWidth;
+    containerHeight = container.getBoundingClientRect().height;
+    console.log(containerHeight)
+    document.body.style.height = `${containerHeight}px`;
+    smoothScroll();
+}
+
+setAnimation();
+// console.log(window.innerWidth);
